@@ -1,0 +1,32 @@
+{
+  "name": "fitcheck-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server/index.mjs",
+    "build": "vite build",
+    "build:review": "vite build --mode review --outDir review-dist --base ./",
+    "start": "node --env-file-if-exists=.env server/index.mjs --production",
+    "test": "node --test tests/*.test.mjs",
+    "test:ui": "playwright test",
+    "fixtures": "node scripts/make-fixtures.mjs",
+    "youcam:check": "node --env-file-if-exists=.env scripts/check-youcam.mjs"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "express": "^5.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.10"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+review-dist/
+.env
+.env.*
+!.env.example
+qa/*.json
+qa/*.png
+test-results/
+playwright-report/
+*.log
